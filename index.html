@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/icon.png">
+</head>
+<body>
+    <main>
+        <section class="header">
+            <h1>Password Generator</h1>
+            <p>A safe and easy way to create a strong password.</p>
+        </section>
+
+        <div class="password-container">
+            <input type="text"
+                    name="password"
+                    id="password"
+                    disabled />
+
+            <div class="btn-container">
+                <button id="refresh-btn" aria-label="refresh button">
+                    <img src="assets/refresh-img.png">
+                </button>
+
+                <button id="copy-btn" aria-label="copy button">
+                    <img src="assets/copy-img.png">
+                </button>
+            </div>
+        </div>
+
+        <div class="security-container">
+            <div class="security-bar safe" id="security-bar"></div>
+        </div>
+
+        <section class="customize-container">
+            <div class="customize-range">
+                <p>Password length: <span id="customize-length">16</span></p>
+                <input type="range"
+                       name="password-length"
+                       id="password-range"
+                       value="16"
+                       min="8"
+                       max="64" />
+            </div>
+
+            <div class="customize-checkbox">
+                <label class="checkbox-container">
+                    <span class="text-checkbox">Uppercase</span>
+                    <input type="checkbox" id="uppercase"/>
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <span class="text-checkbox">Numbers</span>
+                    <input type="checkbox" id="numbers"/>
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="checkbox-container">
+                    <span class="text-checkbox">Symbols</span>
+                    <input type="checkbox" id="symbols"/>
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+        </section>
+    </main>
+    <footer id="ladybug">
+        <a href="https://github.com/joana0j"><img src="assets/ladybugLogo.png"></a>
+    </footer>
+    <script defer src="script.js"></script>
+</body>
+</html>
